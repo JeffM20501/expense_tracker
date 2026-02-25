@@ -1,8 +1,8 @@
-"""User, Category and Expense tables
+"""created new miogrations
 
-Revision ID: e6f748a25c74
+Revision ID: 713c2eb09ab8
 Revises: 
-Create Date: 2026-02-24 20:04:29.864286
+Create Date: 2026-02-25 17:06:30.357134
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e6f748a25c74'
+revision = '713c2eb09ab8'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -38,9 +38,9 @@ def upgrade():
     )
     op.create_table('expenses',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
-    sa.Column('date', sa.DateTime(), nullable=False),
+    sa.Column('date', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
     sa.Column('amount', sa.Double(), nullable=False),
-    sa.Column('description', sa.Double(), nullable=True),
+    sa.Column('description', sa.String(), nullable=True),
     sa.Column('category_id', sa.Integer(), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['category_id'], ['categories.id'], ),
