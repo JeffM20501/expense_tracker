@@ -1,3 +1,82 @@
-.venv
+# Generated .gitignore file for: Python, JavaScript, React, Vue, VSCode, Linux, npm, Pip, Yarn, Vite, SQLite, PostgreSQL, MySQL, JSON, GitHub Actions
+# Created with FOSSA's DevOps Tools
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+venv/
+env/
 .env
-__pycache__
+*.so
+
+# JavaScript
+# Add JavaScript-specific ignores here
+
+# React
+node_modules/
+build/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vue
+# Add Vue-specific ignores here
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Linux
+# Add Linux-specific ignores here
+
+# npm
+# Add npm-specific ignores here
+
+# Pip
+# Add Pip-specific ignores here
+
+# Yarn
+# Add Yarn-specific ignores here
+
+# Vite
+# Add Vite-specific ignores here
+
+# SQLite
+# Add SQLite-specific ignores here
+
+# PostgreSQL
+# Add PostgreSQL-specific ignores here
+
+# MySQL
+# Add MySQL-specific ignores here
+
+# JSON
+# Add JSON-specific ignores here
+
+# GitHub Actions
+# Add GitHub Actions-specific ignores here
+
+# Common
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+
+# IDE and editor generated files
+.idea/
+*.sublime-*
+
+# Local environment files
+.env
+.env.local
+.env.*.local

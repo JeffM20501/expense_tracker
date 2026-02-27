@@ -72,4 +72,4 @@ class SingleResource(Resource):
         db.session.commit()
         print(item)
 
-        return make_response({"data": item}, 201)
+        return make_response({"data": item.to_dict()}, 201)

@@ -6,6 +6,9 @@ from .services.base_resource import *
 api_pb = Blueprint("api_bp", __name__)
 api_v1 = Api(api_pb, prefix="/api/v1")
 
+
+# -------- Categories ------
+
 api_v1.add_resource(
     AllResource,
     "/categories",
@@ -13,12 +16,15 @@ api_v1.add_resource(
     resource_class_args=(Category, "Category")
 )
 
+
 api_v1.add_resource(
     SingleResource,
     "/categories/<id>",
     endpoint="/categories/<id>",
     resource_class_args=(Category, "Category")
 )
+
+# -------- Expenses ------
 
 api_v1.add_resource(
     AllResource,
